@@ -7,8 +7,6 @@ import 'package:blue_thermal_printer/blue_thermal_printer.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 
-
-
 void main() => runApp(new MyApp());
 
 class MyApp extends StatefulWidget {
@@ -230,7 +228,7 @@ class _MyAppState extends State<MyApp> {
 
   Future show(
     String message, {
-    Duration duration: const Duration(seconds: 3),
+    Duration duration = const Duration(seconds: 3),
   }) async {
     await new Future.delayed(new Duration(milliseconds: 100));
     ScaffoldMessenger.of(context).showSnackBar(
